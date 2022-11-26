@@ -1,5 +1,5 @@
 # Christmas Pairs
-
+Christmas themed memory game. Match all pairs in quickest possible time
 - [Link to deployed site here]
 
 # User Experience UX
@@ -15,6 +15,7 @@
 - As a frequent user I want 
 
 # Design
+The game has a vintage christmas theme enjoyable for young and old
 
 ## Colour Scheme
 <img src="assets/images/adobe_christmas_palette.png" width="300px"> \
@@ -32,28 +33,27 @@ I used [Adobe Color Wheel](https://color.adobe.com/create/color-wheel) to genera
 ## Wireframes
 
 # Features
-
 ## Current Features
 ### Header
+Name of game
 ### Christmas Countdown Timer
+Christmas countdown timer counting down days to christmas
 ### How to Play Section
+Brief instruction of how to play
 ### Game container
-### Level, Timer and Score Boxes
+Grid of 20 cards
+### Level and Timer 
 ### The footer
 - The footer holds links to social media 
-- It also has a copyright notice
 - When the user clicks on social media links they will open in a new tab
-
 ## Features Left to Implement
 
 # Testing
-
 ## Validator Testing
 ### HTML
 ### CSS
 ### JavaScript
 ### Lighthouse Testing
-
 ## BUGS
 ## Unfixed Bugs
 

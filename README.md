@@ -23,13 +23,25 @@ I used [Adobe Color Wheel](https://color.adobe.com/create/color-wheel) to genera
 
 ## Typography
 - I took inspiration from [Canva](https://www.canva.com/learn/franchise-fonts/) for my font pairing of Limelight and Roboto. Limelight a classic art deco style font and roboto a simple sans serif font.
-- Both fonts are found on [Googlefonts](https://fonts.google.com/) I decided to use roboto in thin 100 variable \
+- Both fonts are found on [Googlefonts](https://fonts.google.com/) I decided to use roboto in thin 100 variable 
 
+<img src="assets/images/font_limelight.png" width="300px">
 <img src="assets/images/font_roboto.png" width="300px"> 
-<img src="assets/images/font_limelight.png" width="300px"> \
 <img src="assets/images/font_roboto_thin100.png" width="300px"> 
 
 ## Imagery
+Images for cards were found on [Rawpixel](https://www.rawpixel.com/) and [Vecteezy](https://www.vecteezy.com/) \
+<img src="assets/images/car_tree.png" width="100px"> [car_tree](https://www.rawpixel.com/image/4391033/christmas-car-png-sticker-tree-hauling-roof)
+<img src="assets/images/christmas_tree.png" width="100px"> [christmas_tree](https://www.rawpixel.com/image/6707658/png-xmas-sticker)
+<img src="assets/images/holly.png" width="100px"> [holly](https://www.rawpixel.com/image/6673966/png-plant-christmas)
+<img src="assets/images/pinecone.png" width="100px">  [pinecone](https://www.rawpixel.com/image/2354874/free-illustration-png-christmas-pine-cone-winter)
+<img src="assets/images/polar_bear.png" width="100px"> [polar_bear](https://www.rawpixel.com/image/6284543/png-sticker-public-domain) \
+<img src="assets/images/ponsietta.png" width="100px"> [ponsietta](https://www.vecteezy.com/png/13219432-christmas-element-decoration-hand-drawn-doodle-christmas-clip-art)
+<img src="assets/images/present.png" width="100px"> [present](https://www.rawpixel.com/image/6643652/png-christmas-sticker)
+<img src="assets/images/robin.png" width="100px"> [robin](https://www.rawpixel.com/image/6684930/png-sticker-vintage)
+<img src="assets/images/rocking_horse.png" width="100px"> [rocking_horse](https://www.rawpixel.com/image/3988696/illustration-png-sticker-xmas)
+<img src="assets/images/stocking.png" width="100px"> [stocking](https://www.rawpixel.com/image/1231010/red-christmas-stocking)
+
 
 ## Wireframes
 <img src="assets/images/early_wireframe.png" width="600px"> 

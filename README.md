@@ -41,6 +41,8 @@ Images for cards and logo were found on [Rawpixel](https://www.rawpixel.com/) an
 <img src="assets/images/robin.png" width="100px"> [robin](https://www.rawpixel.com/image/6684930/png-sticker-vintage)
 <img src="assets/images/rocking_horse.png" width="100px"> [rocking_horse](https://www.rawpixel.com/image/3988696/illustration-png-sticker-xmas)
 <img src="assets/images/stocking.png" width="100px"> [stocking](https://www.rawpixel.com/image/1231010/red-christmas-stocking)
+<img src="assets/images/snowflake.png" width="100px"> [snowflake](https://www.rawpixel.com/image/6600470/png-aesthetic-christmas)
+
 
 
 ## Wireframes

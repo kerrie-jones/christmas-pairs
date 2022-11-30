@@ -33,7 +33,8 @@ h1 {
     font-size: 200%;
     color: #F2F2F2;
     font-style: italic;
-    font-size: 100%;
+    font-size: 120%;
+    line-height: 100px;
 }
 
 .how-to-play-container {
@@ -68,17 +69,33 @@ h1 {
     align-items: center;
     flex-wrap: wrap;
     border: 1px solid #F2AF5C;
+    grid-gap: 1px;
+    padding: 4px 2px 2px 2px;
 
 
 }
 
 .game-card {
-    background-color: #1F4A49;
-    border: 1px solid #F2AF5C;
+    /* border: 1px solid #F2AF5C; */
     height: 70px;
     width: 70px;
-    margin: auto;
+    margin-bottom: 2px;
 
+}
+
+.front-card {
+    object-fit: contain;
+    background-color: #D92B04;
+    height: 70px;
+    width: 70px;
+
+}
+
+.back-card {
+    object-fit: contain;
+    background-color: #1F4A49;
+    height: 70px;
+    width: 70px;
 }
 
 

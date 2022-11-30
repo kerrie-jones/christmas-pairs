@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Limelight&family=Roboto:wght@100&display=swap');
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
 body {
     background-color: #1F4A49;
     font-family: "Roboto", sans-serif;
@@ -12,7 +18,8 @@ body {
 
 h1 {
     font-family: "Limelight", sans-serif;
-    margin: 0;
+    line-height: 75px;
+    font-size: 300%;
 
 }
 
@@ -22,11 +29,14 @@ h1 {
     text-align: center;
     font-size: 200%;
     color: #F2F2F2;
+    font-style: italic;
+    font-size: 100%;
 }
 
 .how-to-play-container {
     display: flex;
     justify-content: center;
+    margin: 5px;
 
 }
 
@@ -40,6 +50,7 @@ h1 {
     height: 350px;
     display: flex;
     justify-content: center;
+    margin: 5px;
     
 }
 
@@ -49,6 +60,9 @@ h1 {
     border: 1px solid #F2AF5C;
 }
 
+.score-lives-container {
+    margin: 5px;
+}
 
 
 
@@ -58,6 +72,7 @@ h1 {
 .social-networks-container {
     display: flex;
     justify-content: center;
+    margin: 5px;
 }
 
 .social-networks {

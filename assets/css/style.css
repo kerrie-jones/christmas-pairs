@@ -16,6 +16,7 @@ body {
     letter-spacing: 1px;
     word-spacing: 2px;
     line-height: 20px;
+   
 
 }
 
@@ -23,6 +24,7 @@ h1 {
     font-family: "Limelight", sans-serif;
     line-height: 75px;
     font-size: 300%;
+    text-shadow: 3px 3px 8px #203201;
 
 }
 
@@ -120,10 +122,11 @@ h1 {
     align-items: center;
     height: 40px;
     background-color: #F2AF5C;
-    color: #1F4A49;
     width: 300px;
 
 }
+    
+
 
 
 .social-networks i {

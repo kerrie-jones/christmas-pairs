@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-  }
+}
 
 body {
     background-color: #1F4A49;
@@ -13,6 +13,9 @@ body {
     font-weight: 100;
     text-transform: uppercase;
     text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    line-height: 20px;
 
 }
 
@@ -41,24 +44,42 @@ h1 {
 }
 
 .how-to-play {
-    width: 200px;
-    /* border: 1px solid #F2AF5C; */
+    width: 300px;
+    /* border: 1px solid #F2AF5C;  */
+    margin: 5px;
+
 
 }
 
 .game-container {
-    height: 350px;
+    height: auto;
     display: flex;
     justify-content: center;
     margin: 5px;
-    
+
 }
 
 .game-grid {
-    height: 350px;
-    width: 400px;
-    border: 1px solid #F2AF5C;
+    height: fit-content;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+
 }
+
+.game-card {
+    background-color: #1F4A49;
+    border: 1px solid #F2AF5C;
+    height: 70px;
+    width: 70px;
+    margin: auto;
+
+}
+
 
 .score-lives-container {
     margin: 5px;

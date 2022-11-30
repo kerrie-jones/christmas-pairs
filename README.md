@@ -18,7 +18,7 @@ Christmas themed memory game. Match all pairs in quickest possible time
 The game has a vintage christmas theme enjoyable for young and old
 
 ## Colour Scheme
-<img src="assets/images/adobe_christmas_palette.png" width="300px"> \
+<img src="assets/images/adobe_christmas_palette.png" width="600px"> \
 I used [Adobe Color Wheel](https://color.adobe.com/create/color-wheel) to generate a classic, vintage christmas look.
 
 ## Typography
@@ -30,7 +30,7 @@ I used [Adobe Color Wheel](https://color.adobe.com/create/color-wheel) to genera
 <img src="assets/images/font_roboto_thin100.png" width="300px"> 
 
 ## Imagery
-Images for cards were found on [Rawpixel](https://www.rawpixel.com/) and [Vecteezy](https://www.vecteezy.com/) \
+Images for cards and logo were found on [Rawpixel](https://www.rawpixel.com/) and [Vecteezy](https://www.vecteezy.com/) \
 <img src="assets/images/car_tree.png" width="100px"> [car_tree](https://www.rawpixel.com/image/4391033/christmas-car-png-sticker-tree-hauling-roof)
 <img src="assets/images/christmas_tree.png" width="100px"> [christmas_tree](https://www.rawpixel.com/image/6707658/png-xmas-sticker)
 <img src="assets/images/holly.png" width="100px"> [holly](https://www.rawpixel.com/image/6673966/png-plant-christmas)

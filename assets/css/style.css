@@ -58,21 +58,22 @@ h1 {
     display: flex;
     justify-content: center;
     margin: 5px;
-
-    
+    position: relative;
 
 }
 
 .game-grid {
     width: 300px;
     height: fit-content;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
     border: 1px solid #F2AF5C;
-    grid-gap: 1px;
-    padding: 4px 2px 2px 2px;
+    display: flex; 
+    justify-content: space-evenly; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    grid-gap: 1px; 
+    padding: 4px 2px 2px 2px; 
+
+  
 
 
 }
@@ -82,27 +83,39 @@ h1 {
     height: 70px;
     width: 70px;
     margin-bottom: 2px;
+    
 
 }
 
 .front-card {
-    object-fit: contain;
     background-color: #D92B04;
     height: 70px;
     width: 70px;
+    position: absolute;
+   
 
 }
 
 .back-card {
-    object-fit: contain;
     background-color: #1F4A49;
     height: 70px;
     width: 70px;
+    
+
 }
 
+.score-timer-flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.score-lives-container {
+.score-timer-container { 
+    width: 300px;
     margin: 5px;
+    display: flex;
+    justify-content: space-between;
+
 }
 
 

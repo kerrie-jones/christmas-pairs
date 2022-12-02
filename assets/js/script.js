@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: 'ponsietta',
-            img: '../assets/images/ponsiettta.jpg'
+            img: '../assets/images/ponsietta.jpg'
         },
         {
             name: 'present',
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: 'rocking horse',
-            img: '../assets/images/rocking horse.jpg'
+            img: '../assets/images/rocking_horse.jpg'
         },
         {
             name: 'stocking',
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: 'ponsietta',
-            img: '../assets/images/ponsiettta.jpg'
+            img: '../assets/images/ponsietta.jpg'
         },
         {
             name: 'present',
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: 'rocking horse',
-            img: '../assets/images/rocking horse.jpg'
+            img: '../assets/images/rocking_horse.jpg'
         },
         {
             name: 'stocking',
@@ -82,22 +82,24 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     ]
 
-    //  Game grid area
+    //  Create board, flip card and check for match code taken from https://www.youtube.com/watch?v=tjyDOHzKN0w Make Memory Game by Ania Kubow
+    cardArray.sort(() => 0.5 - Math.random())
 
     const grid = document.querySelector('.grid')
+ 
 
     function createBoard() {
         for (let i = 0; i < cardArray.length; i++) {
             const card = document.createElement('img')
             card.setAttribute('src', '../assets/images/snowflake.jpg')
             card.setAttribute('data-id', i)
-            // card.addEventListener('click', flipcard)
+            card.addEventListener('click', flipCard)
             grid.appendChild(card)
         }
     }
 
-    createBoard()
 
 
+createBoard()
 
 })

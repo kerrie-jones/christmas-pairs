@@ -55,28 +55,34 @@ h1 {
 
 
 } 
+/* Game grid Area */
+
+/* .grid-container {
+    display: flex;
+    justify-content: center;
+} */
 
 .grid {
     border: 1px solid #F2AF5C;
     display: flex;
     flex-wrap: wrap;
-    width: 402px;
-    height: 500px;
+    width: 302px;
+    height: 400px;
+    
 }
 
 
 
 
 
-/* code used for game area when images were in HTML */
-/* .game-area {
-    border: 1px solid #F2AF5C;
+/* code used for game area when images were in HTML */ 
+ .grid-container {
     display: flex;
     justify-content: center;
     margin: 5px;
     position: relative;
 
-} */
+}
 
 
  
@@ -96,7 +102,7 @@ h1 {
 
 
 
-----------footer
+/* footer */
 .social-networks-container {
     display: flex;
     justify-content: center;

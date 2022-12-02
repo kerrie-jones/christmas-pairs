@@ -31,17 +31,17 @@ I used [Adobe Color Wheel](https://color.adobe.com/create/color-wheel) to genera
 
 ## Imagery
 Images for cards and logo were found on [Rawpixel](https://www.rawpixel.com/) and [Vecteezy](https://www.vecteezy.com/) \
-<img src="assets/images/car_tree.png" width="100px"> [car_tree](https://www.rawpixel.com/image/4391033/christmas-car-png-sticker-tree-hauling-roof)
-<img src="assets/images/christmas_tree.png" width="100px"> [christmas_tree](https://www.rawpixel.com/image/6707658/png-xmas-sticker)
-<img src="assets/images/holly.png" width="100px"> [holly](https://www.rawpixel.com/image/6673966/png-plant-christmas)
-<img src="assets/images/pinecone.png" width="100px">  [pinecone](https://www.rawpixel.com/image/2354874/free-illustration-png-christmas-pine-cone-winter)
-<img src="assets/images/polar_bear.png" width="100px"> [polar_bear](https://www.rawpixel.com/image/6284543/png-sticker-public-domain) \
-<img src="assets/images/ponsietta.png" width="100px"> [ponsietta](https://www.vecteezy.com/png/13219432-christmas-element-decoration-hand-drawn-doodle-christmas-clip-art)
-<img src="assets/images/present.png" width="100px"> [present](https://www.rawpixel.com/image/6643652/png-christmas-sticker)
-<img src="assets/images/robin.png" width="100px"> [robin](https://www.rawpixel.com/image/6684930/png-sticker-vintage)
-<img src="assets/images/rocking_horse.png" width="100px"> [rocking_horse](https://www.rawpixel.com/image/3988696/illustration-png-sticker-xmas)
-<img src="assets/images/stocking.png" width="100px"> [stocking](https://www.rawpixel.com/image/1231010/red-christmas-stocking)
-<img src="assets/images/snowflake.png" width="100px"> [snowflake](https://www.rawpixel.com/image/6600470/png-aesthetic-christmas)
+<img src="assets/images/car_tree.jpg" width="75px">[car_tree](https://www.rawpixel.com/image/4391033/christmas-car-png-sticker-tree-hauling-roof) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<img src="assets/images/christmas_tree.jpg" width="75px"> [christmas_tree](https://www.rawpixel.com/image/6707658/png-xmas-sticker) &nbsp; 
+<img src="assets/images/holly.jpg" width="75px"> [holly](https://www.rawpixel.com/image/6673966/png-plant-christmas) &nbsp; &nbsp; &nbsp;
+<img src="assets/images/pinecone.jpg" width="75px">  [pinecone](https://www.rawpixel.com/image/2354874/free-illustration-png-christmas-pine-cone-winter) \
+<img src="assets/images/polar_bear.jpg" width="75px"> [polar_bear](https://www.rawpixel.com/image/6284543/png-sticker-public-domain) &nbsp; &nbsp; &nbsp;
+<img src="assets/images/ponsietta.jpg" width="75px"> [ponsietta](https://www.vecteezy.com/png/13219432-christmas-element-decoration-hand-drawn-doodle-christmas-clip-art) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<img src="assets/images/present.jpg" width="75px"> [present](https://www.rawpixel.com/image/6643652/png-christmas-sticker) &nbsp; 
+<img src="assets/images/robin.jpg" width="75px"> [robin](https://www.rawpixel.com/image/6684930/png-sticker-vintage) \
+<img src="assets/images/rocking_horse.jpg" width="75px"> [rocking_horse](https://www.rawpixel.com/image/3988696/illustration-png-sticker-xmas)
+<img src="assets/images/stocking.jpg" width="75px"> [stocking](https://www.rawpixel.com/image/1231010/red-christmas-stocking) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<img src="assets/images/snowflake.jpg" width="75px"> [snowflake](https://www.rawpixel.com/image/6600470/png-aesthetic-christmas)
 
 
 

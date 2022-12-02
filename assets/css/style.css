@@ -16,7 +16,7 @@ body {
     letter-spacing: 1px;
     word-spacing: 2px;
     line-height: 20px;
-   
+
 
 }
 
@@ -54,7 +54,7 @@ h1 {
 
 }
 
-.game-container {
+.game-area {
     display: flex;
     justify-content: center;
     margin: 5px;
@@ -62,45 +62,40 @@ h1 {
 
 }
 
-.game-grid {
+/* Game grid container */
+.game-container {
     width: 300px;
     height: fit-content;
     border: 1px solid #F2AF5C;
-    display: flex; 
-    justify-content: space-evenly; 
-    align-items: center; 
-    flex-wrap: wrap; 
-    grid-gap: 1px; 
-    padding: 4px 2px 2px 2px; 
-
-  
-
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-gap: 1px;
+    padding: 4px 2px 2px 2px;
 
 }
 
-.game-card {
+/* Card container */
+.card {
     /* border: 1px solid #F2AF5C; */
     height: 70px;
     width: 70px;
     margin-bottom: 2px;
-    
 
 }
 
 .front-card {
-    background-color: #D92B04;
     height: 70px;
     width: 70px;
     position: absolute;
-   
 
 }
 
 .back-card {
-    background-color: #1F4A49;
     height: 70px;
     width: 70px;
-    
+
 
 }
 
@@ -110,7 +105,7 @@ h1 {
     align-items: center;
 }
 
-.score-timer-container { 
+.score-timer-container {
     width: 300px;
     margin: 5px;
     display: flex;
@@ -138,9 +133,6 @@ h1 {
     width: 300px;
 
 }
-    
-
-
 
 .social-networks i {
     margin: 5px;

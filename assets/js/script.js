@@ -83,21 +83,37 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
 
     //  Create board, flip card and check for match code taken from https://www.youtube.com/watch?v=tjyDOHzKN0w Make Memory Game by Ania Kubow
-    cardArray.sort(() => 0.5 - Math.random())
 
     const grid = document.querySelector('.grid')
- 
+    var cardsChosen = []
+    var cardsChosenId = []
 
     function createBoard() {
         for (let i = 0; i < cardArray.length; i++) {
-            const card = document.createElement('img')
+            var card = document.createElement('img')
             card.setAttribute('src', '../assets/images/snowflake.jpg')
             card.setAttribute('data-id', i)
             card.addEventListener('click', flipCard)
+            // Add images to .grid
             grid.appendChild(card)
         }
     }
 
+    // Check for match
+
+
+
+    // Flip Card
+    function flipCard() {
+        var cardId = this.getAttribute('data-id')
+        cardsChosen.push(cardArray[cardId].name)
+        cardsChosenId.push(cardId)
+        this.setAttribute('src', cardArray[cardId].img)
+        if (cardsChosen.length === 2) {
+            setTimeout(checkForMatch, 500)
+        }
+    }
+    
 
 
 createBoard()

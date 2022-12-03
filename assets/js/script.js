@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var cardsChosen = []
     var cardsChosenId = []
 
+    // Create game board
     function createBoard() {
         for (let i = 0; i < cardArray.length; i++) {
             var card = document.createElement('img')
@@ -100,7 +101,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Check for match
+    function checkForMatch() {
+        var cards = document.querySelectorAll('img')
+        const optionOneId = cardsChosenId[0]
+        const optionTwoId = cardsChosenId[1] 
+        if (cardsChosen[0] === cardsChosen[1]) {
+            alert ('You found a pair!')
+            cards[optionOneId].setAttribute('src', '../assets/images/green_card')
+            cards[optionTwoId].setAttribute('src', '../assets/images/green_card')
+            cardsWon.push(cardsChosen)
+        } else {
+            cards[optionOneId].setAttribute('src', '../assets/images/snowflake.jpg')
+            cards[optionTwoId].setAttribute('src', '../assets/images/snowflake.jpg')
+            alert('Sorry, try again')
+        }
 
+
+        
+    }
 
 
     // Flip Card

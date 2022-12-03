@@ -83,10 +83,14 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
 
     //  Create board, flip card and check for match code taken from https://www.youtube.com/watch?v=tjyDOHzKN0w Make Memory Game by Ania Kubow
+// Randomise cards for each new board
+    cardArray.sort(() => 0.5 - Math.random())
 
     const grid = document.querySelector('.grid')
+    const resultDisplay = document.querySelector('#score')
     var cardsChosen = []
     var cardsChosenId = []
+    var cardsWon = []
 
     // Create game board
     function createBoard() {
@@ -107,16 +111,23 @@ document.addEventListener('DOMContentLoaded', () => {
         const optionTwoId = cardsChosenId[1] 
         if (cardsChosen[0] === cardsChosen[1]) {
             alert ('You found a pair!')
-            cards[optionOneId].setAttribute('src', '../assets/images/green_card')
-            cards[optionTwoId].setAttribute('src', '../assets/images/green_card')
+            cards[optionOneId].setAttribute('src', '../assets/images/green_card.jpg')
+            cards[optionTwoId].setAttribute('src', '../assets/images/green_card.jpg')
             cardsWon.push(cardsChosen)
         } else {
+            // if dont match flip back over and display snowflake 
             cards[optionOneId].setAttribute('src', '../assets/images/snowflake.jpg')
             cards[optionTwoId].setAttribute('src', '../assets/images/snowflake.jpg')
-            alert('Sorry, try again')
+            alert('Sorry! Try again!')
         }
-
-
+        // if either happens clear cardschosen array and cardschosenId ready to start flipping again
+        cardsChosen = []
+        cardsChosenId = []
+// If no of cards won = length of full array /2 all matches have been found
+        resultDisplay.textContent = cardsWon.length
+        if (cardsWon.length === cardArray.length/2) {
+            resultDisplay.textContent = 'Congratulations! You found all the pairs'
+        }
         
     }
 

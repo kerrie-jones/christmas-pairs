@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     ]
 
-    //  Initial Randomize, Create board, flip card and check for match code taken from https://www.youtube.com/watch?v=tjyDOHzKN0w
+    // Randomize, Create board, flip card and check for match code initially taken from https://www.youtube.com/watch?v=tjyDOHzKN0w
 
     // Randomise cards for each new board
     cardArray.sort(() => 0.5 - Math.random())
@@ -103,7 +103,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function reloadPage() {
         document.location.reload()
     }
-
 
     // Create game board
     function createBoard() {

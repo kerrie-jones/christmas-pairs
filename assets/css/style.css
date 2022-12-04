@@ -7,6 +7,7 @@
 }
 
 body {
+    border: 1px solid #F2AF5C;
     font-family: "Roboto", sans-serif;
     background: #1F4A49;
     color: #F2AF5C;
@@ -15,10 +16,7 @@ body {
     text-align: center;
     letter-spacing: 1px;
     word-spacing: 2px;
-}
-
-.page-wrapper {
-    background-color: #1F4A49;
+    min-width: 410px;
 }
 
 h1 {
@@ -27,6 +25,7 @@ h1 {
     line-height: 75px;
     font-size: 300%;
     text-shadow: 3px 3px 8px #203201;
+    min-width: 410px;
 
 }
 
@@ -40,27 +39,42 @@ h1 {
     font-style: italic;
     font-size: 120%;
     line-height: 100px;
+    min-width: 410px
 }
 
-.how-to-play-container {
-    display: flex;
-    justify-content: center;
-    margin: 5px;
+/* Button Styling */
+.buttons-container {
+display: flex;
+justify-content: center;
+min-width: 410px;
+}
+
+button {
+    background-color: #D92B04;
+    color: #F2AF5C;
+    width: 190px;
+    height: 50px;
+    text-transform: uppercase;
+    font-family: "Limelight", sans-serif;
+    font-size: 140%;
+    text-shadow: 3px 3px 8px #203201;
+    margin: 25px 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 5px 10px 8px black;
 
 }
 
-.how-to-play {
-    width: 300px;
-    margin: 5px;
+button:hover {
+    color: #F2F2F2;
+}
 
-
-} 
-
-
+/* Game grid area styling */
 .grid-container {
     display: flex;
     justify-content: center;
     cursor: pointer;
+    min-width: 410px;
 }
 
 .grid {
@@ -72,47 +86,21 @@ h1 {
 
    
 }
-
-
-
  
 .score-flip-area {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 410px;
 }
 
 .score-flip-container {
-    width: 300px;
+    min-width: 410px;
     margin: 5px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     
-    
-
 }
-
-/* Button Styling */
-button {
-    background-color: #D92B04;
-    color: #F2AF5C;
-    width: 200px;
-    height: 50px;
-    text-transform: uppercase;
-    font-family: "Limelight", sans-serif;
-    font-size: 180%;
-    text-shadow: 3px 3px 8px #203201;
-    margin: 20px;
-    cursor: pointer;
-    border-radius: 8px;
-    box-shadow: 5px 10px 8px black;
-}
-
-button:hover {
-    color: #F2F2F2;
-}
-
-
 
 
 /* footer */
@@ -120,6 +108,7 @@ button:hover {
     display: flex;
     justify-content: center;
     margin: 5px;
+    min-width: 410px;
 }
 
 .social-networks {
@@ -129,7 +118,7 @@ button:hover {
     align-items: center;
     height: 40px;
     background-color:  #1F4A49;
-    width: 300px;
+    width: 400px;
 
 }
 

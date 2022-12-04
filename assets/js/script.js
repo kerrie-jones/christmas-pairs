@@ -138,13 +138,10 @@ document.addEventListener('DOMContentLoaded', () => {
             cards[firstCardId].removeEventListener("click", flipCard);
             cards[secondCardId].removeEventListener("click", flipCard);
             cardsWon.push(cardsChosen)
-            alert('You found a match!')
 // if neither happens flip back over and display snowflake 
         } else {
             cards[firstCardId].setAttribute('src', '../assets/images/snowflake.jpg')
             cards[secondCardId].setAttribute('src', '../assets/images/snowflake.jpg')
-            alert('Sorry! Try again, not a match!')
-
         } 
 // if either happens clear cardschosen array and cardschosenId ready to start flipping again
         cardsChosen = []

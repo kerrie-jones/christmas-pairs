@@ -1,12 +1,12 @@
 # Christmas Pairs
-Christmas themed memory game. Match all pairs in quickest possible time
+Christmas themed memory game. Match all pairs in least amount of flips
 - [Link to deployed site here]
 
 # User Experience UX
 ## User Stories
 ### First Time Visitor Goals
 - As a first time visitor I want to be able to view the site on a range of devices
-- As a first time visitor I want to be able to easily navigate around the website
+- 
 - As a first time visitor I want to find their social media profiles 
 ### Returning Visitor Goals
 - As a returning visitor I want 
@@ -49,6 +49,7 @@ Images for cards and logo were found on [Rawpixel](https://www.rawpixel.com/) an
 <img src="assets/images/early_wireframe.png" width="600px"> 
 
 # Features
+
 ## Current Features
 ### Header
 Name of game
@@ -58,7 +59,7 @@ Christmas countdown timer counting down days to christmas
 Brief instruction of how to play
 ### Game container
 Grid of 20 cards
-### Level and Timer 
+### Level and Flips
 ### The footer
 - The footer holds links to social media 
 - When the user clicks on social media links they will open in a new tab
@@ -91,8 +92,11 @@ The steps to deploy are as follows:
 - Mac Preview - used to resize large images
 - Adobe Color Wheel - used to extract  color theme from main image
 - Balsamiq
+- GIMP - editing images
 
 # Credits
+https://www.youtube.com/watch?v=tjyDOHzKN0w Make MEMORY GAME in JavaScript, HTML and CSS for your portfolio by Ania Kubow
+
 
 ## Content
 

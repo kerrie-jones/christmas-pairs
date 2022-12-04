@@ -83,18 +83,17 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
 
     //  Randomize, Create board, flip card and check for match code taken from https://www.youtube.com/watch?v=tjyDOHzKN0w Make Memory Game by Ania Kubow
-// Randomise cards for each new board
+
+    // Randomise cards for each new board
     cardArray.sort(() => 0.5 - Math.random())
 
     const grid = document.querySelector('.grid')
     const resultDisplay = document.querySelector('#score')
     const flipDisplay = document.querySelector('#flips')
-    var cardsChosen = []
-    var cardsChosenId = []
-    var cardsWon = []
-    var flips = []
-    
-
+    let cardsChosen = []
+    let cardsChosenId = []
+    let cardsWon = []
+    let flips = []
 
 
     // Create game board
@@ -110,38 +109,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Check for match
-    function checkForMatch() {
-        var cards = document.querySelectorAll('img')
-        const firstCardId = cardsChosenId[0]
-        const secondCardId = cardsChosenId[1] 
-        if (cardsChosen[0] === cardsChosen[1]) {
-            alert ('You found a match!')
-            cards[firstCardId].setAttribute('src', '../assets/images/green_card.jpg')
-            cards[secondCardId].setAttribute('src', '../assets/images/green_card.jpg')
-            cardsWon.push(cardsChosen)
-        } else {
-            // if dont match flip back over and display snowflake 
-            cards[firstCardId].setAttribute('src', '../assets/images/snowflake.jpg')
-            cards[secondCardId].setAttribute('src', '../assets/images/snowflake.jpg')
-            alert('Sorry! Try again, not a match!')
-        }
-        // if either happens clear cardschosen array and cardschosenId ready to start flipping again
-        cardsChosen = []
-        cardsChosenId = []
-
-// If number of cards won = length of full array /2 all matches have been found
-        resultDisplay.textContent = cardsWon.length
-        if (cardsWon.length === cardArray.length/2) {
-            resultDisplay.textContent = 'Congratulations! You found all the pairs'
-        }
-        // flipDisplay.textContent = 
-        
-    }
-
-
-    // Flip Card
-    function flipCard() {
+       // Flip Card
+       function flipCard() {
         flips++;
         var cardId = this.getAttribute('data-id')
         cardsChosen.push(cardArray[cardId].name)
@@ -150,12 +119,48 @@ document.addEventListener('DOMContentLoaded', () => {
         if (cardsChosen.length === 2) {
             setTimeout(checkForMatch, 500)
         }
-flipDisplay.textContent = flips;
-
+        // displays no of flips 
+        flipDisplay.textContent = flips;
     }
+
+    // Check for match
+    function checkForMatch() {
+        var cards = document.querySelectorAll('img')
+        const firstCardId = cardsChosenId[0]
+        const secondCardId = cardsChosenId[1]
+        if (cardsChosen[0] === cardsChosen[1]) {
+            cards[firstCardId].setAttribute('src', '../assets/images/green_card.jpg')
+            cards[secondCardId].setAttribute('src', '../assets/images/green_card.jpg')
+            cards[firstCardId].removeEventListener("click", flipCard);
+            cards[secondCardId].removeEventListener("click", flipCard);
+            cardsWon.push(cardsChosen)
+            alert('You found a match!')
+            
+        } else {
+            // if dont match flip back over and display snowflake 
+            cards[firstCard].setAttribute('src', '../assets/images/snowflake.jpg')
+            cards[secondCard].setAttribute('src', '../assets/images/snowflake.jpg')
+            alert('Sorry! Try again, not a match!')
+        } 
+
+
+        // if either happens clear cardschosen array and cardschosenId ready to start flipping again
+        cardsChosen = []
+        cardsChosenId = []
+
+        // If number of cards won = length of full array /2 all matches have been found
+        resultDisplay.textContent = cardsWon.length
+        if (cardsWon.length === cardArray.length / 2) {
+            alert('Congratulations you won!')
+        }
+        
+    }
+
     
+ 
 
 
-createBoard()
+
+    createBoard()
 
 })

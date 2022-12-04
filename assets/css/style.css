@@ -15,7 +15,6 @@ body {
     text-align: center;
     letter-spacing: 1px;
     word-spacing: 2px;
-    line-height: 20px;
 }
 
 .page-wrapper {
@@ -58,22 +57,23 @@ h1 {
 } 
 
 
+.grid-container {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
 .grid {
     border: 1px solid #F2AF5C;
     display: flex;
     flex-wrap: wrap;
-    width: 302px;
-    height: 400px;
+    width: 402px;
+    height: auto;
+
    
 }
 
- .grid-container {
-    display: flex;
-    justify-content: center;
-    margin: 10px;
-    position: relative;
-    cursor: pointer;
-}
+
 
  
 .score-flip-area {
@@ -100,7 +100,7 @@ button {
     height: 50px;
     text-transform: uppercase;
     font-family: "Limelight", sans-serif;
-    font-size: 200%;
+    font-size: 180%;
     text-shadow: 3px 3px 8px #203201;
     margin: 20px;
     cursor: pointer;

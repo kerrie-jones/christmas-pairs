@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
 
     const cardArray = [{
             name: 'car tree',
@@ -82,25 +82,25 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     ]
 
-//  Randomize, Create board, flip card and check for match code taken from https://www.youtube.com/watch?v=tjyDOHzKN0w Make Memory Game by Ania Kubow
+    //  Initial Randomize, Create board, flip card and check for match code taken from https://www.youtube.com/watch?v=tjyDOHzKN0w
 
-// Randomise cards for each new board
+    // Randomise cards for each new board
     cardArray.sort(() => 0.5 - Math.random())
 
-    const grid = document.querySelector('.grid')
-    const resultDisplay = document.querySelector('#score')
-    const flipDisplay = document.querySelector('#flips')
+    let grid = document.querySelector('.grid')
+    let resultDisplay = document.querySelector('#score')
+    let flipDisplay = document.querySelector('#flips')
     let cardsChosen = []
     let cardsChosenId = []
     let cardsWon = []
     let flips = []
 
 
- // Create game board
+    // Create game board
     function createBoard() {
         // loops over all the cards in the array and then appends them to the grid
         for (let i = 0; i < cardArray.length; i++) {
-            var card = document.createElement('img')
+            let card = document.createElement('img')
             card.setAttribute('src', '../assets/images/snowflake.jpg')
             card.setAttribute('data-id', i)
             card.addEventListener('click', flipCard)
@@ -109,45 +109,50 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-// Flip Card
+    // Flip Card
     function flipCard() {
         flips++;
-        var cardId = this.getAttribute('data-id')
-        cardsChosen.push(cardArray[cardId].name)
-        cardsChosenId.push(cardId)
-        this.setAttribute('src', cardArray[cardId].img)
-        if (cardsChosen.length === 2) {
-            setTimeout(checkForMatch, 500)
+    // Prevents more than two cards being
+        if (cardsChosen.length != 2) {
+            let cardId = this.getAttribute('data-id')
+            cardsChosen.push(cardArray[cardId].name)
+            cardsChosenId.push(cardId)
+            this.setAttribute('src', cardArray[cardId].img)
+            if (cardsChosen.length === 2) {
+                setTimeout(checkForMatch, 500)
+            }
+        } else {
+            card.setAttribute('src', '../assets/images/snowflake.jpg')
         }
-// displays no of flips 
+        // displays no of flips 
         flipDisplay.textContent = flips;
     }
-// Check for match
+    // Check for match
     function checkForMatch() {
-        var cards = document.querySelectorAll('img')
-        const firstCardId = cardsChosenId[0]
-        const secondCardId = cardsChosenId[1]
-// if same card is clicked twice it will flip back to snowflake
+        let cards = document.querySelectorAll('img')
+        let firstCardId = cardsChosenId[0]
+        let secondCardId = cardsChosenId[1]
+     // if same card is clicked twice it will flip back to snowflake
         if (firstCardId == secondCardId) {
             cards[firstCardId].setAttribute('src', '../assets/images/snowflake.jpg')
             cards[secondCardId].setAttribute('src', '../assets/images/snowflake.jpg')
-//  if pair matched 
+    //  if pair matched 
         } else if (cardsChosen[0] === cardsChosen[1]) {
             cards[firstCardId].setAttribute('src', '../assets/images/green_card.jpg')
             cards[secondCardId].setAttribute('src', '../assets/images/green_card.jpg')
             cards[firstCardId].removeEventListener("click", flipCard);
             cards[secondCardId].removeEventListener("click", flipCard);
             cardsWon.push(cardsChosen)
-// if neither happens flip back over and display snowflake 
+    // if neither happens flip back over and display snowflake 
         } else {
             cards[firstCardId].setAttribute('src', '../assets/images/snowflake.jpg')
             cards[secondCardId].setAttribute('src', '../assets/images/snowflake.jpg')
-        } 
-// if either happens clear cardschosen array and cardschosenId ready to start flipping again
+        }
+        // if either happens clear cardschosen array and cardschosenId ready to start flipping again
         cardsChosen = []
         cardsChosenId = []
 
-// If number of cards won = length of full array /2 all matches have been found
+        // If number of cards won = length of full array /2 all matches have been found
         resultDisplay.textContent = cardsWon.length
         if (cardsWon.length === cardArray.length / 2) {
             alert('Congratulations you won!')

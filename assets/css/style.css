@@ -56,12 +56,7 @@ h1 {
 
 
 } 
-/* Game grid Area */
 
-/* .grid-container {
-    display: flex;
-    justify-content: center;
-} */
 
 .grid {
     border: 1px solid #F2AF5C;
@@ -69,10 +64,8 @@ h1 {
     flex-wrap: wrap;
     width: 302px;
     height: 400px;
-    
+   
 }
-
-
 
  .grid-container {
     display: flex;
@@ -80,9 +73,7 @@ h1 {
     margin: 5px;
     position: relative;
     cursor: pointer;
-
 }
-
 
  
 .score-timer-area {

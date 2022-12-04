@@ -97,12 +97,11 @@ document.addEventListener('DOMContentLoaded', function () {
     let flips = []
     let replayButton = document.querySelector('.replay_btn')
 
-    // Refreshes the page when clicked 
+    // Refreshes the page when replay button clicked 
     replayButton.addEventListener('click', reloadPage)
 
     function reloadPage() {
-        document. location. reload()
-
+        document.location.reload()
     }
 
 

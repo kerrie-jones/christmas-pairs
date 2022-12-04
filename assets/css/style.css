@@ -70,31 +70,48 @@ h1 {
  .grid-container {
     display: flex;
     justify-content: center;
-    margin: 5px;
+    margin: 10px;
     position: relative;
     cursor: pointer;
 }
 
  
-.score-timer-area {
+.score-flip-area {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.score-timer-container {
+.score-flip-container {
     width: 300px;
     margin: 5px;
     display: flex;
     justify-content: space-between;
+    
+    
 
 }
 
 /* Button Styling */
 button {
     background-color: #D92B04;
-
+    color: #F2AF5C;
+    width: 200px;
+    height: 50px;
+    text-transform: uppercase;
+    font-family: "Limelight", sans-serif;
+    font-size: 200%;
+    text-shadow: 3px 3px 8px #203201;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 5px 10px 8px black;
 }
+
+button:hover {
+    color: #F2F2F2;
+}
+
 
 
 

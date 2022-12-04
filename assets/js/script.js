@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+
     const cardArray = [{
             name: 'car tree',
             img: '../assets/images/car_tree.jpg',
@@ -94,6 +95,15 @@ document.addEventListener('DOMContentLoaded', function () {
     let cardsChosenId = []
     let cardsWon = []
     let flips = []
+    let replayButton = document.querySelector('.replay_btn')
+
+    // Refreshes the page when clicked 
+    replayButton.addEventListener('click', reloadPage)
+
+    function reloadPage() {
+        document. location. reload()
+
+    }
 
 
     // Create game board
@@ -112,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Flip Card
     function flipCard() {
         flips++;
-    // Prevents more than two cards being
+        // Prevents more than two cards being
         if (cardsChosen.length != 2) {
             let cardId = this.getAttribute('data-id')
             cardsChosen.push(cardArray[cardId].name)
@@ -132,18 +142,18 @@ document.addEventListener('DOMContentLoaded', function () {
         let cards = document.querySelectorAll('img')
         let firstCardId = cardsChosenId[0]
         let secondCardId = cardsChosenId[1]
-     // if same card is clicked twice it will flip back to snowflake
+        // if same card is clicked twice it will flip back to snowflake
         if (firstCardId == secondCardId) {
             cards[firstCardId].setAttribute('src', '../assets/images/snowflake.jpg')
             cards[secondCardId].setAttribute('src', '../assets/images/snowflake.jpg')
-    //  if pair matched 
+            //  if pair matched 
         } else if (cardsChosen[0] === cardsChosen[1]) {
             cards[firstCardId].setAttribute('src', '../assets/images/green_card.jpg')
             cards[secondCardId].setAttribute('src', '../assets/images/green_card.jpg')
             cards[firstCardId].removeEventListener("click", flipCard);
             cards[secondCardId].removeEventListener("click", flipCard);
             cardsWon.push(cardsChosen)
-    // if neither happens flip back over and display snowflake 
+            // if neither happens flip back over and display snowflake 
         } else {
             cards[firstCardId].setAttribute('src', '../assets/images/snowflake.jpg')
             cards[secondCardId].setAttribute('src', '../assets/images/snowflake.jpg')
@@ -161,5 +171,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     createBoard()
+
+
 
 })

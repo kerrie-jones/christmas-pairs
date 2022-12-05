@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Popup Modal for game instructions button code inspired by https://www.w3schools.com/howto/howto_css_modals.asp
+    // Popup Modal for game instructions button code inspired by https://www.w3schools.com/howto/howto_css_modals.asp 
 
     btn.onclick = function () {
         modal.style.display = "block";

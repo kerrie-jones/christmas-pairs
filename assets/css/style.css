@@ -96,15 +96,14 @@ button:hover {
     box-shadow: 5px 10px 8px black;
     margin: auto; 
     padding: 5px;
-    /*  or top: 50%;
-    left: 50%; */
     width: 300px;
     height: 200px;
-    font-size: 120%;;
+    font-size: 120%;
 }
 .popup-content p {
     padding-top: 50px;
 }
+
 
 /* close button */
 .close {

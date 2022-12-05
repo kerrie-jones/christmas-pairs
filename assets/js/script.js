@@ -1,8 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    
-
-
     const cardArray = [{
             name: 'car tree',
             img: '../assets/images/car_tree.jpg',
@@ -90,14 +87,22 @@ document.addEventListener('DOMContentLoaded', function () {
     // Randomise cards for each new board
     cardArray.sort(() => 0.5 - Math.random())
 
+
     let grid = document.querySelector('.grid')
     let resultDisplay = document.querySelector('#score')
     let flipDisplay = document.querySelector('#flips')
+    let replayButton = document.querySelector('.replay-btn')
+    let modal = document.querySelector('.popup')
+    let btn = document.querySelector('.instructions-btn')
+    let closeButton = document.querySelector('.close')
+
     let cardsChosen = []
     let cardsChosenId = []
     let cardsWon = []
     let flips = []
-    let replayButton = document.querySelector('.replay_btn')
+
+
+    createBoard()
 
     // Refreshes the page when replay button clicked 
     replayButton.addEventListener('click', reloadPage)
@@ -167,17 +172,21 @@ document.addEventListener('DOMContentLoaded', function () {
         if (cardsWon.length === cardArray.length / 2) {
             alert('Congratulations you won!')
         }
-
     }
 
-    createBoard()
+    // Popup Modal for game instructions button code inspired by https://www.w3schools.com/howto/howto_css_modals.asp
 
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
 
-
-
-
-
-
-    
+    closeButton.onclick = function () {
+        modal.style.display = "none";
+    }
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 
 })

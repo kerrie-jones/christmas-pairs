@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    
+
 
     <h1 class="heading"><i class="fa-regular fa-snowflake"></i> Christmas Pairs <i class="fa-regular fa-snowflake"></i>
     </h1>
@@ -29,51 +29,53 @@
         <p id="timer">days until Christmas!</p>
     </div>
 
-    <div class="page-wrapper">
+    <!-- Buttons for instructions how to play and to replay game -->
+    <div class="buttons-container">
+        <button type="button" class="instructions-btn">Instructions</button>
 
-        <!-- Buttons for instructions how to play and to replay game -->
-        <div class="buttons-container">
-            <div class="how-to-play-container">
-                <button type="button" class="how_to_btn">Instructions</button>
-            </div>
-
-            <div class="replay-container">
-                <button type="button" class="replay_btn">Replay <i class="fa-solid fa-rotate"></i></button>
-            </div>
-        </div>
-
-
-        <!-- Game grid  -->
-        <div class="grid-container">
-            <div class="grid">
-            </div>
-        </div>
-
-        <div class="score-flip-area">
-            <div class="score-flip-container">
-                <p class="score"><i class="fa-regular fa-snowflake"></i> Pairs: <span id="score"></span></p>
-                <p class="flips"><i class="fa-regular fa-snowflake"></i> Flips: <span id="flips"></span></p>
-            </div>
-        </div>
-
-
-        <!-- Footer -->
-        <footer>
-            <div class="social-networks-container">
-                <div class="social-networks">
-                    <span>
-                        <a href="https://github.com/" target="_blank" rel="noopener"
-                            aria-label="Visit my Github (opens in a new tab)"><i class="fa-brands fa-github"></i>
-                    </span>
-                    <span>
-                        <a href="https://ie.linkedin.com/" target="_blank" rel="noopener"
-                            aria-label="Visit my LinkedIn (opens in a new tab)"><i class="fa-brands fa-linkedin"></i>
-                    </span>
-                </div>
-            </div>
-
-        </footer>
+        <!-- this button opens the popup modal box -->
+        <button type="button" class="replay-btn">Replay <i class="fa-solid fa-rotate"></i></button>
     </div>
+
+    <!-- Popup modal box for game instructions when instructions button is clicked -->
+    <div class="popup">
+        <div class="popup-content">
+            <span class="close">x</span>
+            <p>Find all the matching pairs in the least amount of flips</p>
+        </div>
+    </div>
+
+
+    <!-- Game grid  -->
+    <div class="grid-container">
+        <div class="grid">
+        </div>
+    </div>
+
+    <div class="score-flip-area">
+        <div class="score-flip-container">
+            <p class="score"><i class="fa-regular fa-snowflake"></i> Pairs: <span id="score"></span></p>
+            <p class="flips"><i class="fa-regular fa-snowflake"></i> Flips: <span id="flips"></span></p>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-networks-container">
+            <div class="social-networks">
+                <span>
+                    <a href="https://github.com/" target="_blank" rel="noopener"
+                        aria-label="Visit my Github (opens in a new tab)"><i class="fa-brands fa-github"></i>
+                </span>
+                <span>
+                    <a href="https://ie.linkedin.com/" target="_blank" rel="noopener"
+                        aria-label="Visit my LinkedIn (opens in a new tab)"><i class="fa-brands fa-linkedin"></i>
+                </span>
+            </div>
+        </div>
+
+    </footer>
 
     <!--font awesome script-->
     <script src="https://kit.fontawesome.com/b03d8ce12c.js" crossorigin="anonymous"></script>

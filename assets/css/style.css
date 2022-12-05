@@ -7,7 +7,6 @@
 }
 
 body {
-    border: 1px solid #F2AF5C;
     font-family: "Roboto", sans-serif;
     background: #1F4A49;
     color: #F2AF5C;
@@ -19,26 +18,30 @@ body {
     min-width: 400px;
 }
 
+
 h1 {
     border: 1px solid #F2AF5C;
     font-family: "Limelight", sans-serif;
     line-height: 75px;
     font-size: 300%;
-    text-shadow: 3px 3px 8px #203201;
+    text-shadow: 5px 8px 10px black;
     min-width: 400px;
 
+}
+
+h1 i {
+    color: #D92B04;
 }
 
 .countdown-timer {
     border: 1px solid #F2AF5C;
     background-color: #D92B04;
-    height: 100px;
+    height: 70px;
     text-align: center;
     font-size: 200%;
     color: #F2F2F2;
-    font-style: italic;
     font-size: 120%;
-    line-height: 100px;
+    line-height: 70px;
     min-width: 400px
 }
 
@@ -50,7 +53,7 @@ h1 {
 }
 
 button {
-    background-color: #D92B04;
+    background-color: #12383B;
     color: #F2AF5C;
     width: 190px;
     height: 50px;
@@ -62,11 +65,13 @@ button {
     cursor: pointer;
     border-radius: 8px;
     box-shadow: 5px 10px 8px black;
+    border-bottom: #D92B04 solid 1px;
 
 }
 
 button:hover {
-    color: #F2F2F2;
+    color: #F2AF5C;
+    background-color: #D92B04;
 }
 
 /* Game grid area styling */
@@ -95,27 +100,39 @@ button:hover {
 }
 
 .score-flip-container {
+    border: 1px solid #F2AF5C;
     min-width: 400px;
-    margin: 10px 0px;
+    margin: 20px 0px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: left;
+    background-color: #12383B;
+    border-radius: 8px;
+    height: 35px;
+    box-shadow: 5px 10px 8px black;
+}
+
+.score-flip-container i {
+    color: #D92B04;
 }
 
 .score {
-    border: 1px solid #F2AF5C;
-    width: 125px;
+    width: 150px;
     padding: 5px;
-    font-size: 120%;
-  
+    font-size: 130%;
 }
 
 .flips {
-    border: 1px solid #F2AF5C;
-    width: 125px;
+    width: 150px;
     padding: 5px;
-    font-size: 120%;
+    font-size: 130%;
+    background-color: #12383B;
+    
    
+}
+#score, #flips {
+    color: #D92B04;
+    font-weight: 600;
 }
 
 
@@ -132,14 +149,22 @@ button:hover {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 40px;
-    background-color: #1F4A49;
-    width: 400px;
+    height: 35px;
+    width: 200px;
+    background-color: #12383B;
+    border-radius: 8px;
+    box-shadow: 5px 10px 8px black;
 
 }
 
 .social-networks i {
     margin: 5px;
     color: #F2AF5C;
-    font-size: 150%;
+    font-size: 120%;
+    
+}
+
+.social-networks i:hover {
+    color: #F2AF5C;
+    font-size: 160%;
 }

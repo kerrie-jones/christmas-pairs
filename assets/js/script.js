@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    
+
 
     const cardArray = [{
             name: 'car tree',
@@ -171,5 +173,11 @@ document.addEventListener('DOMContentLoaded', function () {
     createBoard()
 
 
+
+
+
+
+
+    
 
 })

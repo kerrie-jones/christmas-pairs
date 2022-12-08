@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 setTimeout(checkForMatch, 500)
             }
         } else {
-            card.setAttribute('src', '../assets/images/snowflake.jpg')
+            card.setAttribute('src', 'assets/images/snowflake.jpg')
         }
         // displays no of flips 
         flipDisplay.textContent = flips;
@@ -148,20 +148,20 @@ document.addEventListener('DOMContentLoaded', function () {
         let secondCardId = cardsChosenId[1]
         // if same card is clicked twice it will flip back to snowflake
         if (firstCardId == secondCardId) {
-            cards[firstCardId].setAttribute('src', '../assets/images/snowflake.jpg')
-            cards[secondCardId].setAttribute('src', '../assets/images/snowflake.jpg')
+            cards[firstCardId].setAttribute('src', 'assets/images/snowflake.jpg')
+            cards[secondCardId].setAttribute('src', 'assets/images/snowflake.jpg')
             //  if pair matched green card shown instead of snowfla
         } else if (cardsChosen[0] === cardsChosen[1]) {
             pairsWon++;
-            cards[firstCardId].setAttribute('src', '../assets/images/green_card.jpg')
-            cards[secondCardId].setAttribute('src', '../assets/images/green_card.jpg')
+            cards[firstCardId].setAttribute('src', 'assets/images/green_card.jpg')
+            cards[secondCardId].setAttribute('src', 'assets/images/green_card.jpg')
             cards[firstCardId].removeEventListener("click", flipCard);
             cards[secondCardId].removeEventListener("click", flipCard);
 
             // if neither happens flip back over and display snowflake 
         } else {
-            cards[firstCardId].setAttribute('src', '../assets/images/snowflake.jpg')
-            cards[secondCardId].setAttribute('src', '../assets/images/snowflake.jpg')
+            cards[firstCardId].setAttribute('src', 'assets/images/snowflake.jpg')
+            cards[secondCardId].setAttribute('src', 'assets/images/snowflake.jpg')
         }
         // Displays no of pairs won 
         scoreDisplay.textContent = pairsWon;

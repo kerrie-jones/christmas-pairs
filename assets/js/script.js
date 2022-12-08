@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let scoreDisplay = document.querySelector('#score')
     let flipDisplay = document.querySelector('#flips')
     let replayButton = document.querySelector('.replay-btn')
-    let InstructionsModal = document.querySelector('#instructions-popup')
+    let instructionsModal = document.querySelector('#instructions-popup')
     let winModal = document.querySelector('#win-popup')
     let btn = document.querySelector('.instructions-btn')
     let closeButton = document.querySelector('.close')
@@ -179,15 +179,15 @@ document.addEventListener('DOMContentLoaded', function () {
     // Popup Modal for game instructions button code inspired by https://www.w3schools.com/howto/howto_css_modals.asp 
 
     btn.onclick = function () {
-        InstructionsModal.style.display = "block";
+        instructionsModal.style.display = "block";
     }
 
     closeButton.onclick = function () {
-        InstructionsModal.style.display = "none";
+        instructionsModal.style.display = "none";
     }
     window.onclick = function (event) {
-        if (event.target == modal) {
-            InstructionsModal.style.display = "none";
+        if (event.target == instructionsModal) {
+            instructionsModal.style.display = "none";
         }
     }
 

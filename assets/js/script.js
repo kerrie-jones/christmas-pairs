@@ -82,17 +82,11 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     ]
 
-    // Randomize, Create board, flip card and check for match code initially taken from https://www.youtube.com/watch?v=tjyDOHzKN0w
-
-    // Randomise cards for each new board
-    cardArray.sort(() => 0.5 - Math.random())
-
-
     let grid = document.querySelector('.grid')
     let scoreDisplay = document.querySelector('#score')
     let flipDisplay = document.querySelector('#flips')
     let replayButton = document.querySelector('.replay-btn')
-    let modal = document.querySelector('.popup')
+    let InstructionsModal = document.querySelector('#instructions-popup')
     let btn = document.querySelector('.instructions-btn')
     let closeButton = document.querySelector('.close')
 
@@ -103,10 +97,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     createBoard()
+    // Randomise cards for each new board
+    cardArray.sort(() => 0.5 - Math.random())
 
     // Refreshes the page when replay button clicked 
     replayButton.addEventListener('click', reloadPage)
-
     function reloadPage() {
         document.location.reload()
     }
@@ -124,11 +119,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // flip card and check for match code initially taken from https://www.youtube.com/watch?v=tjyDOHzKN0w
+
     // Flip Card
     function flipCard() {
         flips++;
-        // Prevents more than two cards being
+        // Prevents more than two cards being clicked
         if (cardsChosen.length != 2) {
+            
             let cardId = this.getAttribute('data-id')
             cardsChosen.push(cardArray[cardId].name)
             cardsChosenId.push(cardId)
@@ -153,37 +151,40 @@ document.addEventListener('DOMContentLoaded', function () {
             cards[secondCardId].setAttribute('src', '../assets/images/snowflake.jpg')
             //  if pair matched green card shown instead of snowfla
         } else if (cardsChosen[0] === cardsChosen[1]) {
-            pairsWon ++;
+            pairsWon++;
             cards[firstCardId].setAttribute('src', '../assets/images/green_card.jpg')
             cards[secondCardId].setAttribute('src', '../assets/images/green_card.jpg')
             cards[firstCardId].removeEventListener("click", flipCard);
             cards[secondCardId].removeEventListener("click", flipCard);
+
             // if neither happens flip back over and display snowflake 
         } else {
             cards[firstCardId].setAttribute('src', '../assets/images/snowflake.jpg')
             cards[secondCardId].setAttribute('src', '../assets/images/snowflake.jpg')
         }
+        // Displays no of pairs won 
+        scoreDisplay.textContent = pairsWon;
+        if (pairsWon == 10)
+        alert('Congratulations you won')
 
-        scoreDisplay.textContent = pairsWon
         // if either happens clear cardschosen array and cardschosenId ready to start flipping again
         cardsChosen = []
         cardsChosenId = []
 
-      
     }
 
     // Popup Modal for game instructions button code inspired by https://www.w3schools.com/howto/howto_css_modals.asp 
 
     btn.onclick = function () {
-        modal.style.display = "block";
+        InstructionsModal.style.display = "block";
     }
 
     closeButton.onclick = function () {
-        modal.style.display = "none";
+        InstructionsModal.style.display = "none";
     }
     window.onclick = function (event) {
         if (event.target == modal) {
-            modal.style.display = "none";
+            InstructionsModal.style.display = "none";
         }
     }
 

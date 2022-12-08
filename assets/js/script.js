@@ -87,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let flipDisplay = document.querySelector('#flips')
     let replayButton = document.querySelector('.replay-btn')
     let InstructionsModal = document.querySelector('#instructions-popup')
+    let winModal = document.querySelector('#win-popup')
     let btn = document.querySelector('.instructions-btn')
     let closeButton = document.querySelector('.close')
 
@@ -165,7 +166,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // Displays no of pairs won 
         scoreDisplay.textContent = pairsWon;
         if (pairsWon == 10)
-        alert('Congratulations you won')
+        winModal.style.display = "block"
+       
+    
 
         // if either happens clear cardschosen array and cardschosenId ready to start flipping again
         cardsChosen = []

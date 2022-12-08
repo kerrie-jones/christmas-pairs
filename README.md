@@ -52,6 +52,7 @@ Images for cards and logo were found on [Rawpixel](https://www.rawpixel.com/) an
 
 ## Current Features
 ### Header
+
 Name of game
 ### Christmas Countdown Timer
 Christmas countdown timer counting down days to christmas

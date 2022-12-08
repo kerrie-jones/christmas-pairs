@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     let grid = document.querySelector('.grid')
-    let resultDisplay = document.querySelector('#score')
+    let scoreDisplay = document.querySelector('#score')
     let flipDisplay = document.querySelector('#flips')
     let replayButton = document.querySelector('.replay-btn')
     let modal = document.querySelector('.popup')
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let cardsChosen = []
     let cardsChosenId = []
-    let cardsWon = []
+    let pairsWon = []
     let flips = []
 
 
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.location.reload()
     }
 
-    // Create game board
+    // Create game board  https://www.youtube.com/watch?v=tjyDOHzKN0w
     function createBoard() {
         // loops over all the cards in the array and then appends them to the grid
         for (let i = 0; i < cardArray.length; i++) {
@@ -151,27 +151,25 @@ document.addEventListener('DOMContentLoaded', function () {
         if (firstCardId == secondCardId) {
             cards[firstCardId].setAttribute('src', '../assets/images/snowflake.jpg')
             cards[secondCardId].setAttribute('src', '../assets/images/snowflake.jpg')
-            //  if pair matched 
+            //  if pair matched green card shown instead of snowfla
         } else if (cardsChosen[0] === cardsChosen[1]) {
+            pairsWon ++;
             cards[firstCardId].setAttribute('src', '../assets/images/green_card.jpg')
             cards[secondCardId].setAttribute('src', '../assets/images/green_card.jpg')
             cards[firstCardId].removeEventListener("click", flipCard);
             cards[secondCardId].removeEventListener("click", flipCard);
-            cardsWon.push(cardsChosen)
             // if neither happens flip back over and display snowflake 
         } else {
             cards[firstCardId].setAttribute('src', '../assets/images/snowflake.jpg')
             cards[secondCardId].setAttribute('src', '../assets/images/snowflake.jpg')
         }
+
+        scoreDisplay.textContent = pairsWon
         // if either happens clear cardschosen array and cardschosenId ready to start flipping again
         cardsChosen = []
         cardsChosenId = []
 
-        // If number of cards won = length of full array /2 all matches have been found
-        resultDisplay.textContent = cardsWon.length
-        if (cardsWon.length === cardArray.length / 2) {
-            alert('Congratulations you won!')
-        }
+      
     }
 
     // Popup Modal for game instructions button code inspired by https://www.w3schools.com/howto/howto_css_modals.asp 

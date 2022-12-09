@@ -13,15 +13,14 @@ body {
     font-weight: 100;
     text-transform: uppercase;
     text-align: center;
-    letter-spacing: 1px;
-    word-spacing: 2px;
+    letter-spacing: 1.5px;
+    word-spacing: 3px;
     min-width: 400px;
     width: 100%;
 }
 
 
 h1 {
-    border: 1px solid #F2AF5C;
     font-family: "Limelight", sans-serif;
     line-height: 75px;
     font-size: 300%;
@@ -35,13 +34,12 @@ h1 i {
 }
 
 .countdown-timer {
-    border: 1px solid #F2AF5C;
     background-color: #D92B04;
-    height: 70px;
+    height: 50px;
     text-align: center;
     font-size: 120%;
     color: #F2F2F2;
-    line-height: 70px;
+    line-height: 50px;
     min-width: 400px
 }
 
@@ -83,41 +81,52 @@ button:hover {
     z-index: 1;
     width: 100%;
     height: 100%;
-    padding-top: 100px;
+    padding-top: 50px;
     background-color: #1F4A49;
-    overflow: auto;
-   
+    overflow: hidden;
+    
 }
 /* popup content */
 .popup-content {
-    background-color: #D92B04;
-    color: #F2F2F2;
+    
+    background-color: #12383B;
+    color: #F2AF5C;
     border-radius: 8px;
-    border: 1px solid #F2AF5C;
     box-shadow: 5px 10px 8px black;
     margin: auto; 
     padding: 5px;
     width: 300px;
     height: 200px;
     font-size: 120%;
+    box-shadow: 5px 10px 8px black;
+    border: #D92B04 solid 1px;
+    
 }
 .popup-content p {
-    padding-top: 50px;
+    padding-top: 30px;
+}
+
+.popup-content i {
+    color: #D92B04;
+    margin: 5px;
 }
 
 
 /* close button */
 .close {
     color: #D92B04;
-    background-color: #F2F2F2;
+    background-color: #12383B;
     float: right;
     cursor: pointer;
     font-weight: 600;
     font-size: 120%;
+    border-radius: 5px;
 }
 
 .close:hover {
-color: #12383B;
+background-color: #F2F2F2;;
+
+
 }
 
 

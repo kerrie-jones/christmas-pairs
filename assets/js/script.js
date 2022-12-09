@@ -80,43 +80,43 @@ document.addEventListener('DOMContentLoaded', function () {
             name: 'stocking',
             img: 'assets/images/stocking.jpg'
         },
-    ]
+    ];
 
-    let grid = document.querySelector('.grid')
-    let scoreDisplay = document.querySelector('#score')
-    let flipDisplay = document.querySelector('#flips')
-    let replayButton = document.querySelector('.replay-btn')
-    let instructionsModal = document.querySelector('#instructions-popup')
-    let winModal = document.querySelector('#win-popup')
-    let btn = document.querySelector('.instructions-btn')
-    let closeButton = document.querySelector('.close')
+    let grid = document.querySelector('.grid');
+    let scoreDisplay = document.querySelector('#score');
+    let flipDisplay = document.querySelector('#flips');
+    let replayButton = document.querySelector('.replay-btn');
+    let instructionsModal = document.querySelector('#instructions-popup');
+    let winModal = document.querySelector('#win-popup');
+    let btn = document.querySelector('.instructions-btn');
+    let closeButton = document.querySelector('.close');
 
-    let cardsChosen = []
-    let cardsChosenId = []
-    let pairsWon = []
-    let flips = []
+    let cardsChosen = [];
+    let cardsChosenId = [];
+    let pairsWon = [];
+    let flips = [];
 
 
-    createBoard()
+    createBoard();
     // Randomise cards for each new board
-    cardArray.sort(() => 0.5 - Math.random())
+    cardArray.sort(() => 0.5 - Math.random());
 
     // Refreshes the page when replay button clicked 
-    replayButton.addEventListener('click', reloadPage)
+    replayButton.addEventListener('click', reloadPage);
     function reloadPage() {
-        document.location.reload()
+        document.location.reload();
     }
 
     // Create game board  https://www.youtube.com/watch?v=tjyDOHzKN0w
     function createBoard() {
         // loops over all the cards in the array and then appends them to the grid
         for (let i = 0; i < cardArray.length; i++) {
-            let card = document.createElement('img')
-            card.setAttribute('src', 'assets/images/snowflake.jpg')
-            card.setAttribute('data-id', i)
-            card.addEventListener('click', flipCard)
+            let card = document.createElement('img');
+            card.setAttribute('src', 'assets/images/snowflake.jpg');
+            card.setAttribute('data-id', i);
+            card.addEventListener('click', flipCard);
             // Adds images to .grid
-            grid.appendChild(card)
+            grid.appendChild(card);
         }
     }
 
@@ -128,51 +128,51 @@ document.addEventListener('DOMContentLoaded', function () {
         // Prevents more than two cards being clicked
         if (cardsChosen.length != 2) {
             
-            let cardId = this.getAttribute('data-id')
-            cardsChosen.push(cardArray[cardId].name)
-            cardsChosenId.push(cardId)
-            this.setAttribute('src', cardArray[cardId].img)
+            let cardId = this.getAttribute('data-id');
+            cardsChosen.push(cardArray[cardId].name);
+            cardsChosenId.push(cardId);
+            this.setAttribute('src', cardArray[cardId].img);
             if (cardsChosen.length === 2) {
-                setTimeout(checkForMatch, 500)
+                setTimeout(checkForMatch, 500);
             }
         } else {
-            card.setAttribute('src', 'assets/images/snowflake.jpg')
+            this.setAttribute('src', 'assets/images/snowflake.jpg');
         }
         // displays no of flips 
         flipDisplay.textContent = flips;
     }
     // Check for match
     function checkForMatch() {
-        let cards = document.querySelectorAll('img')
-        let firstCardId = cardsChosenId[0]
-        let secondCardId = cardsChosenId[1]
+        let cards = document.querySelectorAll('img');
+        let firstCardId = cardsChosenId[0];
+        let secondCardId = cardsChosenId[1];
         // if same card is clicked twice it will flip back to snowflake
         if (firstCardId == secondCardId) {
-            cards[firstCardId].setAttribute('src', 'assets/images/snowflake.jpg')
-            cards[secondCardId].setAttribute('src', 'assets/images/snowflake.jpg')
+            cards[firstCardId].setAttribute('src', 'assets/images/snowflake.jpg');
+            cards[secondCardId].setAttribute('src', 'assets/images/snowflake.jpg');
             //  if pair matched green card shown instead of snowfla
         } else if (cardsChosen[0] === cardsChosen[1]) {
             pairsWon++;
-            cards[firstCardId].setAttribute('src', 'assets/images/green_card.jpg')
-            cards[secondCardId].setAttribute('src', 'assets/images/green_card.jpg')
+            cards[firstCardId].setAttribute('src', 'assets/images/green_card.jpg');
+            cards[secondCardId].setAttribute('src', 'assets/images/green_card.jpg');
             cards[firstCardId].removeEventListener("click", flipCard);
             cards[secondCardId].removeEventListener("click", flipCard);
 
             // if neither happens flip back over and display snowflake 
         } else {
-            cards[firstCardId].setAttribute('src', 'assets/images/snowflake.jpg')
-            cards[secondCardId].setAttribute('src', 'assets/images/snowflake.jpg')
+            cards[firstCardId].setAttribute('src', 'assets/images/snowflake.jpg');
+            cards[secondCardId].setAttribute('src', 'assets/images/snowflake.jpg');
         }
         // Displays no of pairs won 
         scoreDisplay.textContent = pairsWon;
         if (pairsWon == 10)
-        winModal.style.display = "block"
+        winModal.style.display = "block";
        
     
 
         // if either happens clear cardschosen array and cardschosenId ready to start flipping again
-        cardsChosen = []
-        cardsChosenId = []
+        cardsChosen = [];
+        cardsChosenId = [];
 
     }
 
@@ -180,15 +180,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     btn.onclick = function () {
         instructionsModal.style.display = "block";
-    }
+    };
 
     closeButton.onclick = function () {
         instructionsModal.style.display = "none";
-    }
+    };
     window.onclick = function (event) {
         if (event.target == instructionsModal) {
             instructionsModal.style.display = "none";
         }
-    }
+    };
 
-})
+});

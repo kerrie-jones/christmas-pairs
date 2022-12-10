@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // incrementally increase number of flips each time function is run
         flips++;
 
-        if (cardsChosen.length <2) {
+        if (cardsChosen.length < 2) {
 
             let cardId = this.getAttribute('data-id');
             // pushes the id and name into the empty cardschosen array 
@@ -201,30 +201,31 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     };
 
-    // Countdown Timer https://www.youtube.com/watch?v=V-Mcul5kS_Y and https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_countdown
-    let christmas = new Date ('Dec 25, 2022')
-// 1000 milliseconds in a second
+    // Countdown Timer code inspired by https://www.youtube.com/watch?v=V-Mcul5kS_Y and https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_countdown
+    let christmas = new Date('Dec 25, 2022')
+    // 1000 milliseconds in a second
     let second = 1000;
-    let min = 1000 * 60
     let hour = 1000 * 60 * 60;
-    let day = 1000 * 60 * 60 * 24
+    let day = 1000 * 60 * 60 * 24;
 
-function countDown () {
-    // needs todays time for each interval
-    let todaysDate = new Date()
-    let difference = christmas - todaysDate;
+    function countDown() {
+        // needs todays time for each interval
+        let todaysDate = new Date()
+        let difference = christmas - todaysDate;
 
-    let days = Math.floor(difference / day);
-    let hours = Math.floor((difference % day) / hour);
-    let mins = Math.floor((difference % hour)/ min);
-    let seconds = Math.floor((difference % min) / second);
+        let days = Math.floor(difference / day);
+        let hours = Math.floor((difference % day) / hour);
 
-document.getElementById('countdown').innerHTML = "Christmas Countdown  " + days + "d " + hours + "h " + mins + "m " + seconds + "s ";
+        if (difference > 0) {
+            document.getElementById('countdown').innerHTML = days + " days " + hours + " hours " + " to Christmas!";
+        } else {
+            clearInterval(countDownInterval);
+            Document.getElementById.innerHTML = "Happy Christmas!"
+        }
+    }
 
-console.log(countdown)
-}
-// runs countdown function every second
-setInterval(countDown, second)
+    // runs countdown function every second
+    let countDownInterval = setInterval(countDown, second);
 
 
 });

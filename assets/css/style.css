@@ -34,11 +34,12 @@ h1 i {
 }
 
 .countdown-timer {
+    font-family: "Limelight", sans-serif;
+    text-transform: capitalize;
     background-color: #D92B04;
     height: 50px;
     text-align: center;
-    font-size: 120%;
-    text-transform: capitalize;
+    font-size: 130%;
     color: #F2F2F2;
     line-height: 50px;
     min-width: 400px

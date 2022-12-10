@@ -83,8 +83,8 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
 
     let grid = document.querySelector('.grid');
-    let scoreDisplay = document.querySelector('#score');
-    let flipDisplay = document.querySelector('#flips');
+    let scoreDisplay = document.querySelector('.score');
+    let flipDisplay = document.querySelector('.flips');
     let replayButton = document.querySelector('.replay-btn');
     let instructionsModal = document.querySelector('#instructions-popup');
     let winModal = document.querySelector('#win-popup');
@@ -103,16 +103,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Refreshes the page when replay button clicked 
     replayButton.addEventListener('click', reloadPage);
+
     function reloadPage() {
         document.location.reload();
     }
 
-    // Create game board  https://www.youtube.com/watch?v=tjyDOHzKN0w
+    // Create game board taken from https://www.youtube.com/watch?v=tjyDOHzKN0w
     function createBoard() {
         // loops over all the cards in the array and then appends them to the grid
         for (let i = 0; i < cardArray.length; i++) {
             let card = document.createElement('img');
             card.setAttribute('src', 'assets/images/snowflake.jpg');
+            // loops over each card and gives id from 0 to 19
             card.setAttribute('data-id', i);
             card.addEventListener('click', flipCard);
             // Adds images to .grid
@@ -120,37 +122,44 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // flip card and check for match code initially taken from https://www.youtube.com/watch?v=tjyDOHzKN0w
+    // flip card and check for match code initially taken and adapted from https://www.youtube.com/watch?v=tjyDOHzKN0w
 
     // Flip Card
     function flipCard() {
+        // incrementally increase number of flips each time function is run
         flips++;
-        // Prevents more than two cards being clicked
-        if (cardsChosen.length != 2) {
-            
+
+        if (cardsChosen.length <2) {
+
             let cardId = this.getAttribute('data-id');
+            // pushes the id and name into the empty cardschosen array 
             cardsChosen.push(cardArray[cardId].name);
+            // pushes id into the empty cardsId array
             cardsChosenId.push(cardId);
+            // Adds the image to that square
             this.setAttribute('src', cardArray[cardId].img);
+            // if cardschosen is 2 call function: check for match
             if (cardsChosen.length === 2) {
                 setTimeout(checkForMatch, 500);
             }
+            // if third card flipped img will remain as snowflake 
         } else {
             this.setAttribute('src', 'assets/images/snowflake.jpg');
         }
         // displays no of flips 
         flipDisplay.textContent = flips;
+        console.log(cardsChosen)
     }
-    // Check for match
+    // Check for match (2 values now in cardsChosen array and cardsChosenId array from flipcard function)
     function checkForMatch() {
         let cards = document.querySelectorAll('img');
+        /* if same card clicked twice flip back to snowflake img */
         let firstCardId = cardsChosenId[0];
         let secondCardId = cardsChosenId[1];
-        // if same card is clicked twice it will flip back to snowflake
-        if (firstCardId == secondCardId) {
+        if (firstCardId === secondCardId) {
             cards[firstCardId].setAttribute('src', 'assets/images/snowflake.jpg');
             cards[secondCardId].setAttribute('src', 'assets/images/snowflake.jpg');
-            //  if pair matched green card shown instead of snowfla
+            //  if pair matched green card shown instead of snowflake and pairsWon to incrmentally increase
         } else if (cardsChosen[0] === cardsChosen[1]) {
             pairsWon++;
             cards[firstCardId].setAttribute('src', 'assets/images/green_card.jpg');
@@ -158,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
             cards[firstCardId].removeEventListener("click", flipCard);
             cards[secondCardId].removeEventListener("click", flipCard);
 
-            // if neither happens flip back over and display snowflake 
+            // if neither happens flip back over and display snowflake img
         } else {
             cards[firstCardId].setAttribute('src', 'assets/images/snowflake.jpg');
             cards[secondCardId].setAttribute('src', 'assets/images/snowflake.jpg');
@@ -166,11 +175,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // Displays no of pairs won 
         scoreDisplay.textContent = pairsWon;
         if (pairsWon == 10)
-        winModal.style.display = "block";
-       
-    
+            winModal.style.display = "block";
 
-        // if either happens clear cardschosen array and cardschosenId ready to start flipping again
+        // Clear cardschosen array and cardschosenId so back to empty for next flip
         cardsChosen = [];
         cardsChosenId = [];
 

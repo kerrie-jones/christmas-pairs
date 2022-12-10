@@ -177,13 +177,13 @@ background-color: #F2F2F2;;
     color: #D92B04;
 }
 
-.score-count {
+.score-counter {
     width: 150px;
     padding: 5px;
     font-size: 130%;
 }
 
-.flip-count {
+.flips-counter {
     width: 150px;
     padding: 5px;
     font-size: 130%;

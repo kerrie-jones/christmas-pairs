@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // flip card and check for match code initially taken and adapted from https://www.youtube.com/watch?v=tjyDOHzKN0w
+    // flip card and check for match code initially taken and from https://www.youtube.com/watch?v=tjyDOHzKN0w
 
     // Flip Card
     function flipCard() {

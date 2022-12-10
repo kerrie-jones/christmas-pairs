@@ -38,6 +38,7 @@ h1 i {
     height: 50px;
     text-align: center;
     font-size: 120%;
+    text-transform: capitalize;
     color: #F2F2F2;
     line-height: 50px;
     min-width: 400px

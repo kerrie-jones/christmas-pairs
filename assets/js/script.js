@@ -86,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let scoreDisplay = document.querySelector('.score');
     let flipDisplay = document.querySelector('.flips');
     let flipWinDisplay = document.querySelector('.win-flips')
+
     let replayButton = document.querySelector('.replay-btn');
     let instructionsModal = document.querySelector('#instructions-popup');
     let winModal = document.querySelector('#win-popup');
@@ -199,5 +200,31 @@ document.addEventListener('DOMContentLoaded', function () {
             instructionsModal.style.display = "none";
         }
     };
+
+    // Countdown Timer https://www.youtube.com/watch?v=V-Mcul5kS_Y and https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_countdown
+    let christmas = new Date ('Dec 25, 2022')
+// 1000 milliseconds in a second
+    let second = 1000;
+    let min = 1000 * 60
+    let hour = 1000 * 60 * 60;
+    let day = 1000 * 60 * 60 * 24
+
+function countDown () {
+    // needs todays time for each interval
+    let todaysDate = new Date()
+    let difference = christmas - todaysDate;
+
+    let days = Math.floor(difference / day);
+    let hours = Math.floor((difference % day) / hour);
+    let mins = Math.floor((difference % hour)/ min);
+    let seconds = Math.floor((difference % min) / second);
+
+document.getElementById('countdown').innerHTML = "Christmas Countdown  " + days + "d " + hours + "h " + mins + "m " + seconds + "s ";
+
+console.log(countdown)
+}
+// runs countdown function every second
+setInterval(countDown, second)
+
 
 });

@@ -191,7 +191,7 @@ background-color: #F2F2F2;;
     
    
 }
-.score, .flips {
+.score, .flips, .win-flips {
     color: #D92B04;
     font-weight: 600;
 }

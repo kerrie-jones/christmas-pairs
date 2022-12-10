@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let grid = document.querySelector('.grid');
     let scoreDisplay = document.querySelector('.score');
     let flipDisplay = document.querySelector('.flips');
+    let flipWinDisplay = document.querySelector('.win-flips')
     let replayButton = document.querySelector('.replay-btn');
     let instructionsModal = document.querySelector('#instructions-popup');
     let winModal = document.querySelector('#win-popup');
@@ -146,9 +147,10 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             this.setAttribute('src', 'assets/images/snowflake.jpg');
         }
-        // displays no of flips 
+        // displays no of flips in flip counter and if won in the popup modal box
         flipDisplay.textContent = flips;
-        console.log(cardsChosen)
+        flipWinDisplay.textContent = flips;
+
     }
     // Check for match (2 values now in cardsChosen array and cardsChosenId array from flipcard function)
     function checkForMatch() {
@@ -172,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function () {
             cards[firstCardId].setAttribute('src', 'assets/images/snowflake.jpg');
             cards[secondCardId].setAttribute('src', 'assets/images/snowflake.jpg');
         }
-        // Displays no of pairs won 
+        // Displays no of pairs won in flip counter
         scoreDisplay.textContent = pairsWon;
         if (pairsWon == 10)
             winModal.style.display = "block";

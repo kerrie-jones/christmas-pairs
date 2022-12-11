@@ -178,6 +178,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Displays no of pairs won in flip counter
         scoreDisplay.textContent = pairsWon;
         if (pairsWon == 10)
+        // displays modal poup box 
             winModal.style.display = "block";
 
         // Clear cardschosen array and cardschosenId so back to empty for next flip
@@ -200,6 +201,8 @@ document.addEventListener('DOMContentLoaded', function () {
             instructionsModal.style.display = "none";
         }
     };
+
+
 
     // Countdown Timer code inspired by https://www.youtube.com/watch?v=V-Mcul5kS_Y and https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_countdown
     let christmas = new Date('Dec 25, 2022')

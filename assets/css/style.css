@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Limelight&display=swap');
 
 * {
     padding: 0;
@@ -7,21 +7,17 @@
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     background: #1F4A49;
     color: #F2AF5C;
-    font-weight: 100;
-    text-transform: uppercase;
     text-align: center;
-    letter-spacing: 1.5px;
-    word-spacing: 3px;
     min-width: 400px;
     width: 100%;
 }
 
 
 h1 {
-    font-family: "Limelight", sans-serif;
+    font-family: "Limelight", cursive;
     line-height: 75px;
     font-size: 300%;
     text-shadow: 5px 8px 10px black;
@@ -34,7 +30,7 @@ h1 i {
 }
 
 .countdown-timer {
-    font-family: "Limelight", sans-serif;
+    font-family: "Limelight", cursive;
     text-transform: capitalize;
     background-color: #D92B04;
     height: 50px;
@@ -58,7 +54,7 @@ button {
     width: 190px;
     height: 50px;
     text-transform: capitalize;
-    font-family: "Limelight", sans-serif;
+    font-family: "Limelight", cursive;
     font-size: 150%;
     text-shadow: 3px 3px 8px #203201;
     margin: 25px 10px;
@@ -99,13 +95,13 @@ button:hover {
     padding: 5px;
     width: 300px;
     height: 200px;
-    font-size: 120%;
+    font-size: 170%;
     box-shadow: 5px 10px 8px black;
     border: #D92B04 solid 1px;
     
 }
 .popup-content p {
-    padding-top: 30px;
+    padding-top: 15px;
 }
 
 .popup-content i {
@@ -171,8 +167,9 @@ background-color: #F2F2F2;;
     text-align: left;
     background-color: #12383B;
     border-radius: 8px;
-    height: 35px;
+    height: 40px;
     box-shadow: 5px 10px 8px black;
+    text-transform: capitalize;
 }
 
 .score-flip-container i {
@@ -182,20 +179,21 @@ background-color: #F2F2F2;;
 .score-counter {
     width: 150px;
     padding: 5px;
-    font-size: 130%;
+    font-size: 170%;
 }
 
 .flips-counter {
     width: 150px;
     padding: 5px;
-    font-size: 130%;
+    font-size: 170%;
     background-color: #12383B;
     
    
 }
 .score, .flips, .win-flips {
     color: #D92B04;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 120%;
 }
 
 
@@ -212,7 +210,7 @@ background-color: #F2F2F2;;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 35px;
+    height: 40px;
     width: 200px;
     background-color: #12383B;
     border-radius: 8px;
@@ -228,7 +226,7 @@ background-color: #F2F2F2;;
 }
 
 .social-networks i:hover {
-    color: #F2AF5C;
-    font-size: 160%;
+    color: #D92B04;
+    font-size: 190%;
 }
 

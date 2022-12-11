@@ -289,9 +289,10 @@ button:hover {
     }
 
     .countdown-timer {
-        font-size: 130%;
+        font-size: 140%;
         min-width: 280px;
-        font-size: 110%;
+        font-size: 120%;
+        line-height: 30px;
     }
 
     .snow div {

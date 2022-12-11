@@ -22,6 +22,7 @@ h1 {
     font-size: 300%;
     text-shadow: 5px 8px 10px black;
     min-width: 400px;
+    text-transform: uppercase;
 
 }
 

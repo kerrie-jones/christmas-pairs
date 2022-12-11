@@ -24,12 +24,13 @@
 I used [Adobe Color Wheel](https://color.adobe.com/create/color-wheel) to generate a classic, vintage christmas look.
 
 ## Typography
-- I took inspiration from [Canva](https://www.canva.com/learn/franchise-fonts/) for my font pairing of Limelight and Roboto. Limelight a classic art deco style font and roboto a simple sans serif font.
+- Limelight is a classic art deco style font 
+- Josefin sans is an elegant, vintage sans serif font
 - Both fonts are found on [Googlefonts](https://fonts.google.com/) I decided to use roboto in thin 100 variable 
 
 <img src="assets/images/font_limelight.png" width="300px">
-<img src="assets/images/font_roboto.png" width="300px"> 
-<img src="assets/images/font_roboto_thin100.png" width="300px"> 
+<img src="assets/images/font_josefin_sans.png" width="300px"> 
+
 
 ## Imagery
 - The favicon for the page was generated in favicon.co

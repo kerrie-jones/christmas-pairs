@@ -13,7 +13,7 @@ body {
     text-align: center;
     min-width: 300px;
     width: 100%;
-    
+
 }
 
 h1 {
@@ -278,6 +278,7 @@ button:hover {
         font-size: 240%;
         line-height: 50px;
     }
+
     h1 i {
         font-size: 90%;
     }
@@ -285,7 +286,7 @@ button:hover {
     .snow {
         width: 100vw;
         margin: 0 auto;
-        
+
     }
 
     .countdown-timer {
@@ -324,7 +325,7 @@ button:hover {
         height: 40px;
         width: 300px;
         font-size: 90%;
-        
+
     }
 
 

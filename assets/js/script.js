@@ -3,82 +3,102 @@ document.addEventListener('DOMContentLoaded', function () {
     const cardArray = [{
             name: 'car tree',
             img: 'assets/images/car_tree.jpg',
+            alt: 'red car with cristmas tree on roof'
         },
         {
             name: 'christmas tree',
             img: 'assets/images/christmas_tree.jpg',
+            alt: 'christmas tree',
         },
         {
             name: 'holly',
-            img: 'assets/images/holly.jpg'
+            img: 'assets/images/holly.jpg',
+            alt: 'holly',
         },
         {
             name: 'pinecone',
-            img: 'assets/images/pinecone.jpg'
+            img: 'assets/images/pinecone.jpg',
+            alt: 'pinecone',
         },
         {
             name: 'polar bear',
-            img: 'assets/images/polar_bear.jpg'
+            img: 'assets/images/polar_bear.jpg',
+            alt: 'polar bear',
         },
         {
             name: 'ponsietta',
-            img: 'assets/images/ponsietta.jpg'
+            img: 'assets/images/ponsietta.jpg',
+            alt: 'ponsietta',
         },
         {
             name: 'present',
-            img: 'assets/images/present.jpg'
+            img: 'assets/images/present.jpg',
+            alt: 'present',
         },
         {
             name: 'robin',
-            img: 'assets/images/robin.jpg'
+            img: 'assets/images/robin.jpg',
+            alt: 'robin',   
         },
         {
             name: 'rocking horse',
-            img: 'assets/images/rocking_horse.jpg'
+            img: 'assets/images/rocking_horse.jpg',
+            alt: 'rocking horse',
         },
         {
             name: 'stocking',
-            img: 'assets/images/stocking.jpg'
+            img: 'assets/images/stocking.jpg',
+            alt: 'stocking',
         },
         {
             name: 'car tree',
             img: 'assets/images/car_tree.jpg',
+            alt: 'red car with tree on roof',
         },
         {
             name: 'christmas tree',
             img: 'assets/images/christmas_tree.jpg',
+            alt: 'christmas tree',
         },
         {
             name: 'holly',
-            img: 'assets/images/holly.jpg'
+            img: 'assets/images/holly.jpg',
+            alt: 'holly',
         },
         {
             name: 'pinecone',
-            img: 'assets/images/pinecone.jpg'
+            img: 'assets/images/pinecone.jpg',
+            alt: 'pinecone',
         },
         {
             name: 'polar bear',
-            img: 'assets/images/polar_bear.jpg'
+            img: 'assets/images/polar_bear.jpg',
+            alt: 'polar bear',
         },
         {
             name: 'ponsietta',
-            img: 'assets/images/ponsietta.jpg'
+            img: 'assets/images/ponsietta.jpg',
+            alt: 'ponsietta',
         },
         {
             name: 'present',
-            img: 'assets/images/present.jpg'
+            img: 'assets/images/present.jpg',
+            alt: 'present',
         },
         {
             name: 'robin',
-            img: 'assets/images/robin.jpg'
+            img: 'assets/images/robin.jpg',
+            alt: 'robin',
         },
         {
             name: 'rocking horse',
-            img: 'assets/images/rocking_horse.jpg'
+            img: 'assets/images/rocking_horse.jpg',
+            alt: 'rocking horse',
         },
         {
             name: 'stocking',
-            img: 'assets/images/stocking.jpg'
+            img: 'assets/images/stocking.jpg',
+            alt: 'stocking',
         },
     ];
 
@@ -115,7 +135,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // loops over all the cards in the array and then appends them to the grid
         for (let i = 0; i < cardArray.length; i++) {
             let card = document.createElement('img');
-            card.setAttribute('src', 'assets/images/snowflake.jpg');
+            card.setAttribute('src', 'assets/images/snowflake.jpg',);
+            card.setAttribute('alt', 'snowflake on red background')
             // loops over each card and gives id from 0 to 19
             card.setAttribute('data-id', i);
             card.addEventListener('click', flipCard);
@@ -134,12 +155,13 @@ document.addEventListener('DOMContentLoaded', function () {
         if (cardsChosen.length < 2) {
 
             let cardId = this.getAttribute('data-id');
-            // pushes the id and name into the empty cardschosen array 
+            // pushes the  name into the empty cardschosen array based on id
             cardsChosen.push(cardArray[cardId].name);
             // pushes id into the empty cardsId array
             cardsChosenId.push(cardId);
-            // Adds the image to that square
+            // Adds the image to that square based on cardid it holds
             this.setAttribute('src', cardArray[cardId].img);
+            this.setAttribute('alt', cardArray[cardId].alt);
             // if cardschosen is 2 call function: check for match
             if (cardsChosen.length === 2) {
                 setTimeout(checkForMatch, 500);
@@ -147,6 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // if third card flipped img will remain as snowflake 
         } else {
             this.setAttribute('src', 'assets/images/snowflake.jpg');
+            this.setAttribute('alt', 'snowflake on red background');
         }
         // displays no of flips in flip counter and if won in the popup modal box
         flipDisplay.textContent = flips;
@@ -161,24 +184,31 @@ document.addEventListener('DOMContentLoaded', function () {
         let secondCardId = cardsChosenId[1];
         if (firstCardId === secondCardId) {
             cards[firstCardId].setAttribute('src', 'assets/images/snowflake.jpg');
+            cards[firstCardId].setAttribute('alt', 'snowflake on red background');
             cards[secondCardId].setAttribute('src', 'assets/images/snowflake.jpg');
+            cards[secondCardId].setAttribute('alt', 'snowflake on red background');
+
             //  if pair matched green card shown instead of snowflake and pairsWon to incrmentally increase
         } else if (cardsChosen[0] === cardsChosen[1]) {
             pairsWon++;
             cards[firstCardId].setAttribute('src', 'assets/images/green_card.jpg');
+            cards[firstCardId].setAttribute('alt', 'blank green card');
             cards[secondCardId].setAttribute('src', 'assets/images/green_card.jpg');
+            cards[secondCardId].setAttribute('alt', 'blank green card');
             cards[firstCardId].removeEventListener("click", flipCard);
             cards[secondCardId].removeEventListener("click", flipCard);
 
             // if neither happens flip back over and display snowflake img
         } else {
             cards[firstCardId].setAttribute('src', 'assets/images/snowflake.jpg');
+            cards[firstCardId].setAttribute('alt', 'snowflake on red background');
             cards[secondCardId].setAttribute('src', 'assets/images/snowflake.jpg');
+            cards[secondCardId].setAttribute('alt', 'snowflake on red background');
         }
         // Displays no of pairs won in flip counter
         scoreDisplay.textContent = pairsWon;
         if (pairsWon == 10)
-        // displays modal poup box 
+            // displays modal poup box 
             winModal.style.display = "block";
 
         // Clear cardschosen array and cardschosenId so back to empty for next flip

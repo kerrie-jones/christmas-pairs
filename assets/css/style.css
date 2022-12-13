@@ -321,7 +321,7 @@ button:hover {
     }
 
     .score-flip-container {
-        flex: wrap;
+        
         height: 40px;
         width: 300px;
         font-size: 90%;

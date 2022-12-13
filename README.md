@@ -33,7 +33,7 @@ I used [Adobe Color Wheel](https://color.adobe.com/create/color-wheel) to genera
 
 
 ## Imagery
-- The favicon for the page was generated in [favicon.io](https://favicon.io/) \
+- The favicon for the page was generated in [favicon.io](https://favicon.io/) using the christmas tree image also used as one of my cards\
 <img src="assets/images/favicon.ico " width="30px">
 
 - Images for cards and logo were found on [Rawpixel](https://www.rawpixel.com/) and [Vecteezy](https://www.vecteezy.com/) \
@@ -60,24 +60,24 @@ I used [Adobe Color Wheel](https://color.adobe.com/create/color-wheel) to genera
 <img src="assets/images/heading.png" width="600px">
 
 ### Christmas Countdown Timer
-- Christmas countdown timer counting down days to christmas \
+- Christmas countdown timer counting down days to christmas. Snowlike effect added in css. \
 <img src="assets/images/countdown_timer.png" width="600px">
 
 
 ### Instructions Button 
-- This button when clicked brings up the instructions popup.
+- This button when clicked brings up the instructions popup. \
 <img src="assets/images/instructions_button.png" width="150px"> 
 
 ### Instructions Popup 
-- Modal popup with instruction on how to play \
+- Modal popup with instruction on how to play. User can close out of this by clicking x or anywhere outside the box \
 <img src="assets/images/instructions_modal.png" width="200px">
 
 ### Replay Button
-- This button when clicked refreshes the page, so the user can restart the game
+- This button when clicked refreshes the page, so the user can restart the game \
 <img src="assets/images/replay_button.png" width="150px">
 
 ### Game Grid
-- Grid of 20 cards. 10 matching pairs. All cards initially will have the red snowflake image. 2 cards are then flipped revealing card image. If pairs are a match there will then be a plain green image in place of the red snowflake image. \
+- Grid of 20 cards. 10 matching pairs. All cards initially will have the red snowflake image. 2 cards are then flipped revealing card image. If pairs are a match there will then be a plain green image in place of the red snowflake image. If not a match they will revert back to the red snowflake image ready for user to flip two more cards \
 <img src="assets/images/game_grid.png" width="300px">
 
 ### Pairs Won Counter Display and Flips Counter Display
@@ -94,20 +94,29 @@ I used [Adobe Color Wheel](https://color.adobe.com/create/color-wheel) to genera
 <img src="assets/images/footer.png" width="150px">
 
 ## Features Left to Implement
-- When popup modals are open I would like to prevent the main body from scrolling.
 - I would like to implement a scoreboard where the user can keep track of their previous scores
 
 # Testing
 - I have tested the website on various different screen sizes in dev tools.
 - I have tested the website on chrome, safari and firefox.
-- 
+- I have used dev tools during project build to help with troubleshooting and to verify that code was working.
 ## Validator Testing
-### HTML
-### CSS
-### JavaScript
+### HTML W3C Validator
+- index.html No errors returned when passing through the official [W3C Validator](https://validator.w3.org/)
+### CSS Jigsaw Validator
+- style.css No errors returned when passing through the official [Jigsaw Validator](https://jigsaw.w3.org/css-validator/)
+### JavaScript JS Hint Validator
+- script.js No errors returned when passing through the official [JS Hint](https://jshint.com/)
 ### Lighthouse Testing
+- Lighthouse testing initialy showed lower accessibility as I did not have alt attributes on the images in javascript. I added theses and score improved for both mobile and desktop seen below \
+<img src="assets/images/lighthouse_mobile.png" width="300px">
+<img src="assets/images/lighthouse_desktop.png" width="300px">
+
 ## BUGS
-## Unfixed Bugs
+### Solved Bugs
+- It was possible to flip a third card before check for match function started so I added an if statement to the start of my flipcard function if < 2 cards are picked they are pushed into the empty array and if ===2 check for match function begins, else flip back to snowflake img.
+### Unfixed Bugs
+- When popup modals are open the main body still scrolls. Given more time I would like to rectify this.
 
 # Deployment
 The site was deployed to GitHub pages.\
@@ -140,8 +149,10 @@ The steps to deploy are as follows:
 
 # Credits
 ## Online Tutorials
-- https://www.youtube.com/watch?v=tjyDOHzKN0w Make MEMORY GAME in JavaScript, HTML and CSS for your portfolio by Ania Kubow \
-- https://www.w3schools.com/howto/howto_css_modals.asp  How TO - CSS/JS Modal \
+- Initial code for memory game inspired by https://www.youtube.com/watch?v=tjyDOHzKN0w Make MEMORY GAME in JavaScript, HTML and CSS for your portfolio 
+- Code for modal boxes inspired by: https://www.w3schools.com/howto/howto_css_modals.asp  How TO - CSS/JS Modal 
+- Code for snow effect on countdown timer from: https://codepen.io/Calleb/pen/dyVRvyW
+- Countdown Timer code inspired by https://www.youtube.com/watch?v=V-Mcul5kS_Y Build a Birthday Countdown in JavaScript (super simple!) and https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_countdown How TO - JavaScript Countdown Timer
 
 ## Content
 - Content was written by Kerrie Jones
@@ -149,4 +160,4 @@ The steps to deploy are as follows:
 ## Media
 - Images are taken [from Rawpixel](https://www.rawpixel.com/) and [Vecteezy](https://www.vecteezy.com/) image links in imagery section above.
 - Icons are from [font-awesome](https://fontawesome.com/) 
-- Favicon generated
+- Favicon generated in [Favicon.io](https://favicon.io/)

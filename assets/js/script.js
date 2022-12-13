@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let grid = document.querySelector('.grid');
     let scoreDisplay = document.querySelector('.score');
     let flipDisplay = document.querySelector('.flips');
-    let flipWinDisplay = document.querySelector('.win-flips')
+    let flipWinDisplay = document.querySelector('.win-flips');
 
     let replayButton = document.querySelector('.replay-btn');
     let instructionsModal = document.querySelector('#instructions-popup');
@@ -135,8 +135,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // loops over all the cards in the array and then appends them to the grid
         for (let i = 0; i < cardArray.length; i++) {
             let card = document.createElement('img');
-            card.setAttribute('src', 'assets/images/snowflake.jpg',);
-            card.setAttribute('alt', 'snowflake on red background')
+            card.setAttribute('src', 'assets/images/snowflake.jpg');
+            card.setAttribute('alt', 'snowflake on red background');
             // loops over each card and gives id from 0 to 19
             card.setAttribute('data-id', i);
             card.addEventListener('click', flipCard);
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
             cardsChosen.push(cardArray[cardId].name);
             // pushes id into the empty cardsId array
             cardsChosenId.push(cardId);
-            // Adds the image to that square based on cardid it holds
+            // Adds the image and alt to that square based on cardid it holds
             this.setAttribute('src', cardArray[cardId].img);
             this.setAttribute('alt', cardArray[cardId].alt);
             // if cardschosen is 2 call function: check for match
@@ -232,10 +232,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     };
 
-
-
     // Countdown Timer code inspired by https://www.youtube.com/watch?v=V-Mcul5kS_Y and https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_countdown
-    let christmas = new Date('Dec 25, 2022')
+    let christmas = new Date('Dec 25, 2022');
     // 1000 milliseconds in a second
     let second = 1000;
     let hour = 1000 * 60 * 60;
@@ -243,7 +241,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function countDown() {
         // needs todays time for each interval
-        let todaysDate = new Date()
+        let todaysDate = new Date();
         let difference = christmas - todaysDate;
 
         let days = Math.floor(difference / day);
@@ -253,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('countdown').innerHTML = days + " days " + hours + " hours " + " to Christmas!";
         } else {
             clearInterval(countDownInterval);
-            Document.getElementById.innerHTML = "Happy Christmas!"
+            Document.getElementById.innerHTML = "Happy Christmas!";
         }
     }
 

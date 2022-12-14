@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             name: 'robin',
             img: 'assets/images/robin.jpg',
-            alt: 'robin',   
+            alt: 'robin',
         },
         {
             name: 'rocking horse',
@@ -188,7 +188,8 @@ document.addEventListener('DOMContentLoaded', function () {
             cards[secondCardId].setAttribute('src', 'assets/images/snowflake.jpg');
             cards[secondCardId].setAttribute('alt', 'snowflake on red background');
 
-            //  if pair matched green card shown instead of snowflake and pairsWon to incrmentally increase
+            /*  if pair matched green card shown instead of snowflake and pairsWon to 
+            incrmentally increase event listener removed from these cards so won cards can't be flipped*/
         } else if (cardsChosen[0] === cardsChosen[1]) {
             pairsWon++;
             cards[firstCardId].setAttribute('src', 'assets/images/green_card.jpg');
